@@ -7,6 +7,24 @@
 > 发布日期：2026-11-15
 > 安卓版：BingYan001/ZayuMax ｜ 桌面版：BingYan001/Zayu-Desktop
 
+## 品牌改名：YunX → Zayu
+
+这一版把内部遗留的 `yunx` 命名全部换掉了，装完之后看到的东西都统一叫杂鱼Max / Zayu：
+
+| 位置 | 改名前 | 改名后 |
+| --- | --- | --- |
+| 启动器 | `YunX-Desktop.exe` | `Zayu-Desktop.exe` |
+| 安装目录 | `%LOCALAPPDATA%\Programs\YunX-Desktop` | `%LOCALAPPDATA%\Programs\Zayu-Desktop` |
+| 数据库 | `yunx.db` | `zayu.db` |
+| 日志 | `yunx-desktop.log` | `zayu-desktop.log` |
+| 环境变量 | `YUNX_DESKTOP_DATA_DIR` | `ZAYU_DESKTOP_DATA_DIR` |
+| 仓库 | `tidain/YunX-Desktop` | `BingYan001/Zayu-Desktop` |
+
+**从旧版升级不会丢账号**：首次启动时旧库 `yunx.db` 连同 `-wal` / `-shm` 三件套会原子改名成
+`zayu.db`；旧数据目录 `~/.yunx-desktop` 与 `~/.yunx-pc` 也会照常复制/迁移过来。
+
+> 装过旧版的机器建议先卸载旧版再装这一版（安装目录名变了，会并存两份）。
+
 ## 新增：5 家网盘
 
 网盘支持从 10 家扩到 15 家，新增的 5 家全部走完整链路：分享解析 → 目录浏览 → 取直链 → 转存 → 临时清理。
